@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import "./globals.css";
 import SigninForm from "./_auth/forms/SigninForm";
 import { Home } from "./_root/pages";
 import SignupForm from "./_auth/forms/SignupForm";
 import AuthLayout from "./_auth/forms/AuthLayout";
 import RootLayout from "./_root/pages/RootLayout";
+import { Toaster } from "@/components/ui/toaster";
 
+import "./globals.css";
 const App = () => {
   return (
     <main className="flex h-screen">
@@ -23,6 +24,7 @@ const App = () => {
         <Route index element={<Home />} />
         </Route>
       </Routes>
+      <Toaster />
     </main>
   );
 };
